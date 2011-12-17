@@ -10,32 +10,32 @@
 (meditations
   "You will face many decisions"
   (= :a (if (false? (= 4 5))
-            :a
-            :b))
+          :a
+          :b))
 
   "Some of them leave you no alternative"
   (= [] (if (> 4 3)
-            []))
+          []))
 
   "And in such a situation you may have nothing"
   (= nil (if (nil? 0)
-             [:a :b :c]))
+          [:a :b :c]))
 
   "In others your alternative may be interesting"
   (= :glory (if (not (empty? ()))
-                :doom
-                :glory))
+              :doom
+              :glory))
 
   "You may have a multitude of possible paths"
   (let [x 5]
-    (= :your_road (cond (= x 11) :road_not_taken
-                        (= x 4) :another_road_not_taken
-                        :else :your_road)))
+    (= :your-road (cond (= x 4) :road-not-taken
+                        (= x 6) :another-road-not-taken
+                        :else :your-road)))
 
   "Or your fate may be sealed"
   (= 'doom (if-not (zero? 0)
-                'doom
-                'doom))
+          'doom
+          'doom))
 
   "In case of emergency, sound the alarms"
   (= :sirens
@@ -44,4 +44,3 @@
   "But admit it when you don't know what to do"
   (= :say-what?
      (explain-defcon-level :yo-mama)))
-
